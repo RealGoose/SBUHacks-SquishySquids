@@ -4,7 +4,7 @@ import json
 
 def getHospList(latitude, longitude):
     """
-    Returns a list of tuples which represent the latitude and longitude of nearby hopsitals
+    Prints a list of tuples which represent the latitude and longitude of nearby hopsitals
     """
     conn = http.client.HTTPSConnection("api.radar.io")
     payload = ''
@@ -12,8 +12,7 @@ def getHospList(latitude, longitude):
       'Authorization': 'prj_test_pk_6e76504d47441be5e8ad2fc0dcd6daaa57083aa5 '
     }
 
-    latitude = 40.70390
-    longitude = -73.98670
+
     conn.request("GET", "/v1/search/autocomplete?query=hospital&near=" + str(latitude) + "," + str(longitude), payload, headers)
     res = conn.getresponse()
     data = res.read().decode("utf-8")
