@@ -1,5 +1,7 @@
 import http.client
 import mimetypes
+import json
+from hospital import getHospList
 # Python Program to Get IP Address
 import requests
 from requests import get
@@ -16,5 +18,10 @@ headers = {
 }
 conn.request("GET", "/v1/geocode/ip?" + str(ip), payload, headers)
 res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
+data = res.read().decode("utf-8")
+json_data = json.loads(data)
+
+print(json_data["address"]["latitude"])
+print(json_data["address"]["longitude"])
+
+getHospList(json_data["address"]["latitude"], json_data["address"]["longitude"])
