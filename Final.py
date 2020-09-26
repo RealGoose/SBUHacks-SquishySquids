@@ -67,24 +67,24 @@ def drawLeft():
     mylabel = w.create_text((220, 100), text="Hospitals Near You", font = ("Montserrat 25 bold"))
     #Address 1
     shortAddressIWillUseInThisUI = mainStructure()
-    mylabel = w.create_text((220, 185), text=shortAddressIWillUseInThisUI[0], font = ("Montserrat 16 bold"))
+    mylabel = w.create_text((220, 185), text=shortAddressIWillUseInThisUI[0][0], font = ("Montserrat 16 bold"))
     mylabel2 = w.create_text((220, 225), text="Closest To You!!!", font = ("Montserrat 16 bold"))
     #Address 2
     print(shortAddressIWillUseInThisUI[0])
     shortAddressIWillUseInThisUI = mainStructure()
-    mylabel = w.create_text((220, 285), text=shortAddressIWillUseInThisUI[1], font = ("Montserrat 16 bold"))
+    mylabel = w.create_text((220, 285), text=shortAddressIWillUseInThisUI[1][0], font = ("Montserrat 16 bold"))
     w.create_line(50, 250, 400, 250, fill="#476042")
     #Address 3
     shortAddressIWillUseInThisUI = mainStructure()
-    mylabel = w.create_text((220, 385), text=shortAddressIWillUseInThisUI[2], font = ("Montserrat 16 bold"))
+    mylabel = w.create_text((220, 385), text=shortAddressIWillUseInThisUI[2][0], font = ("Montserrat 16 bold"))
     w.create_line(50, 350, 400, 350, fill="#476042")
     #Address 4
     shortAddressIWillUseInThisUI = mainStructure()
-    mylabel = w.create_text((220, 485), text=shortAddressIWillUseInThisUI[3], font = ("Montserrat 16 bold"))
+    mylabel = w.create_text((220, 485), text=shortAddressIWillUseInThisUI[3][0], font = ("Montserrat 16 bold"))
     w.create_line(50, 450, 400, 450, fill="#476042")
     #Address 5
     shortAddressIWillUseInThisUI = mainStructure()
-    mylabel = w.create_text((220, 585), text=shortAddressIWillUseInThisUI[4], font = ("Montserrat 16 bold"))
+    mylabel = w.create_text((220, 585), text=shortAddressIWillUseInThisUI[4][0], font = ("Montserrat 16 bold"))
     w.create_line(50, 550, 400, 550, fill="#476042")
     w.create_line(50, 620, 400, 620, fill="#476042")
     #bottom stuff
