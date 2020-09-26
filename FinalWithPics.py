@@ -5,7 +5,7 @@ from tkinter import Tk, Canvas, Frame, BOTH
 from main import mainStructure
 from PIL import ImageTk,Image
 from time import sleep
-
+from mapIt import getDirections
 
 #LOADING SCREEN START
 
@@ -86,6 +86,11 @@ def drawLeft():
     #bottom stuff
     mylabel = w.create_text((220, 700), text="In Case of An Emergency, Call 911", font = ("Montserrat 18 bold"))
 
+    b = Canvas(window, width = 1280, height = 820)
+    b.pack()
+    
+    button = Button(b, text = 'Open Map', command = getDirections())  
+    button.pack()  
     #print('Left DONE')
 
 
@@ -115,3 +120,4 @@ drawRight()
 # PROBABLY THE MOST IMPORTANT PART!!!!!!!!!!
 # if you forget to call the mainloop function, nothing will appear to the user
 window.mainloop()
+
