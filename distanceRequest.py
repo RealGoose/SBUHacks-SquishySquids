@@ -14,5 +14,12 @@ def getDistance(olat, olong, dlat, dlong):
     }
     conn.request("GET", "/v1/route/distance?origin=" + str(olat) + "," + str(olong) + "&destination=" + str(dlat) + ',' +  str(dlong) + "&modes=car&units=imperial", payload, headers)
     res = conn.getresponse()
-    data = res.read()
+    data = res.read().decode("utf-8")
     #print(data.decode("utf-8"))
+
+    json_data = json.loads(data)
+
+
+
+    
+    return (json_data["routes"]["car"]["distance"]["text"],json_data["routes"]["car"]["duration"]["text"])

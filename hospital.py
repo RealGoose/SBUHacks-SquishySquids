@@ -4,7 +4,7 @@ import json
 from distanceRequest import getDistance
 def getHospList(latitude, longitude):
     """
-    Prints a list of formatted addresses of nearby hospitals
+    Prints a list of tuples of length 5, with the formatted addresses of nearby hospitals, distance by car, time to travel by car, all as strings
     """
     conn = http.client.HTTPSConnection("api.radar.io")
     payload = ''
@@ -27,9 +27,9 @@ def getHospList(latitude, longitude):
 
     formatted_address_list = []
     for address in addresses:
-        formatted_address_list.append(address["formattedAddress"])
+        formatted_address_list.append((address["formattedAddress"], getDistance(latitude, longitude, address["latitude"], address["longitude"])[0], getDistance(latitude, longitude, address["latitude"], address["longitude"])[1],))
         #d_list.append((address["latitude"],address["longitude"]))
-        getDistance(latitude, longitude, address["latitude"], address["longitude"])
+
 
     #print(d_list)
     #print(formatted_address_list)
