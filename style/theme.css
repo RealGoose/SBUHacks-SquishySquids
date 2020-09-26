@@ -96,9 +96,17 @@ color: #303941;
 .rectangle{
 position: absolute;
 width: 591px;
-height: 1080px;
+height: 1016px;
 left: 0px;
-top: 0px;
+top: 64px;
 
 background: #BADEFF;
 }
+
+/*.gcse-search{
+    position: absolute;
+    width: 591px;
+    height: 1080px;
+    right: 0px;
+    top: 0px;
+} */
