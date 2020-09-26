@@ -1,13 +1,24 @@
 import http.client
 import mimetypes
-# Python Program to Get IP Address
 import requests
 from requests import get
 
+#Users ip address
 ip = get('https://api.ipify.org').text
-print('Your public IP address is: {}'.format(ip))
+print('Your public IP address is: {}\n'.format(ip))
 
-#print("Your Computer IP Address is:" + IPAddress)
+#Latitude and Longtitude of the User's IP address
+url = "http://ip-api.com/json/"+ ip + "?fields=lat,lon"
+payload = {}
+headers= {}
+
+response = requests.request("GET", url, headers=headers, data = payload)
+printable_response = str(response).strip("\'b")
+print(response.text.encode('utf8'))
+print('\n')
+
+
+#Actual Radar query
 conn = http.client.HTTPSConnection("api.radar.io")
 payload = ''
 headers = {
@@ -17,4 +28,5 @@ headers = {
 conn.request("GET", "/v1/geocode/ip?" + str(ip), payload, headers)
 res = conn.getresponse()
 data = res.read()
-print(data.decode("utf-8"))
+#Messy Radar Output:
+#print(data.decode("utf-8"))
