@@ -1,9 +1,11 @@
 import http.client
 import mimetypes
 # Python Program to Get IP Address
-import socket
-hostname = socket.gethostname()
-IPAddress = socket.gethostbyname(hostname)
+import urllib.request
+
+IPAddress = urllib.request.urlopen('https://ident.me').read().decode('utf8')
+
+print(IPAddress)
 
 print("Your Computer IP Address is:" + IPAddress)
 conn = http.client.HTTPSConnection("api.radar.io")
