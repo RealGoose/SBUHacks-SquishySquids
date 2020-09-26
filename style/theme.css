@@ -1,0 +1,99 @@
+body{
+    margin: 0px;
+    text-align: center;
+    background: #E5E5E5;
+    font-family: 'Merriweather', serif;
+
+
+}
+
+h1{
+    position: absolute;
+width: 499px;
+height: 73px;
+left: 46px;
+top: 69px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 60px;
+line-height: 73px;
+
+color: #303941;
+}
+
+.linetwo{
+position: absolute;
+width: 414px;
+height: 0px;
+left: 88px;
+top: 188px;
+
+border: 1px solid rgba(48, 57, 65, 0.7);
+}
+
+.address{
+position: absolute;
+width: 363px;
+height: 43px;
+left: 46px;
+top: 234px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 35px;
+line-height: 43px;
+/* identical to box height */
+
+
+
+color: #303941;
+
+}
+
+.distance{
+position: absolute;
+width: 160px;
+height: 34px;
+left: 43px;
+top: 283px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 34px;
+
+color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+.time{
+    position: absolute;
+width: 253px;
+height: 43px;
+left: 46px;
+top: 363px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 35px;
+line-height: 43px;
+/* identical to box height */
+
+
+color: #303941;
+}
+.rectangle{
+position: absolute;
+width: 591px;
+height: 1080px;
+left: 0px;
+top: 0px;
+
+background: #BADEFF;
+}
