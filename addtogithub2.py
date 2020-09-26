@@ -1,12 +1,23 @@
 import http.client
 import mimetypes
+import json
 conn = http.client.HTTPSConnection("api.radar.io")
 payload = ''
 headers = {
-  'Authorization': 'prj_test_sk_9a8f0000f39d8e0eae541935779588195a7d3401',
-  'Cookie': '__cfduid=d6dc9a3eeb82f6b63f9ab8bbe607cfa891601077693'
+  'Authorization': 'prj_test_pk_6e76504d47441be5e8ad2fc0dcd6daaa57083aa5 '
 }
-conn.request("GET", "/v1/search/autocomplete?query=hospital&near=40.908235, -73.114839", payload, headers)
+conn.request("GET", "/v1/search/autocomplete?query=brooklyn+roasting&near=40.70390,-73.98670", payload, headers)
 res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
+data = res.read().decode("utf-8")
+
+
+json_data = json.loads(data)
+
+#print(json_data)
+addresses = json_data["addresses"]
+
+long_lat_list = []
+for address in addresses:
+    long_lat_list.append((address["latitude"],address["longitude"]))
+
+print(long_lat_list)
