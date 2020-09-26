@@ -4,7 +4,7 @@ import json
 
 def getHospList(latitude, longitude):
     """
-    Prints a list of tuples which represent the latitude and longitude of nearby hopsitals
+    Prints a list of formatted addresses of nearby hopsitals
     """
     conn = http.client.HTTPSConnection("api.radar.io")
     payload = ''
@@ -23,8 +23,8 @@ def getHospList(latitude, longitude):
     #print(json_data)
     addresses = json_data["addresses"]
 
-    long_lat_list = []
+    formatted_address_list = []
     for address in addresses:
-        long_lat_list.append((address["latitude"],address["longitude"]))
+        formatted_address_list.append(address["formattedAddress"])
 
-    print(long_lat_list)
+    print(formatted_address_list)
