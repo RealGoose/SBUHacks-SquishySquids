@@ -22,7 +22,7 @@ loading = tk.Tk()
 loading.title("Welcome to Hospital Locator")
 
 C = Canvas(loading, bg="blue", height=250, width=300)
-filename = PhotoImage(file = "C:\\Users\\Alim\\Desktop\\SquishySquids\\Frame-2.png")
+filename = PhotoImage(file = "Frame-2.png")
 background_label = Label(loading, image=filename)
 loading.geometry('1280x820')
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
@@ -62,7 +62,7 @@ def drawLeft():
     #Blue Background
     w.create_rectangle(0, 0, 450, 820, outline="#BADEFF", fill="#BADEFF", width=2)
     #The line
-    w.create_line(50, 150, 400, 150, fill="#476042")    
+    w.create_line(50, 150, 400, 150, fill="#476042")
     #Hospitals Near You
     mylabel = w.create_text((220, 100), text="Hospitals Near You", font = ("Montserrat 25 bold"))
     #Address 1
@@ -73,7 +73,7 @@ def drawLeft():
     print(shortAddressIWillUseInThisUI[0])
     shortAddressIWillUseInThisUI = mainStructure()
     mylabel = w.create_text((220, 285), text=shortAddressIWillUseInThisUI[1], font = ("Montserrat 16 bold"))
-    w.create_line(50, 250, 400, 250, fill="#476042")  
+    w.create_line(50, 250, 400, 250, fill="#476042")
     #Address 3
     shortAddressIWillUseInThisUI = mainStructure()
     mylabel = w.create_text((220, 385), text=shortAddressIWillUseInThisUI[2], font = ("Montserrat 16 bold"))
@@ -89,7 +89,7 @@ def drawLeft():
     w.create_line(50, 620, 400, 620, fill="#476042")
     #bottom stuff
     mylabel = w.create_text((220, 700), text="In Case of An Emergency, Call 911", font = ("Montserrat 18 bold"))
-    
+
     print('Left DONE')
 
 
