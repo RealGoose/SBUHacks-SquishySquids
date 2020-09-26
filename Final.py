@@ -22,7 +22,7 @@ loading = tk.Tk()
 loading.title("Welcome to Hospital Locator")
 
 C = Canvas(loading, bg="blue", height=250, width=300)
-filename = PhotoImage(file = "Frame-2.png")
+filename = PhotoImage(file = "images/Frame-2.png")
 background_label = Label(loading, image=filename)
 loading.geometry('1280x820')
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
