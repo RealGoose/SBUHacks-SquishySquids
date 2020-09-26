@@ -41,12 +41,12 @@ def mainStructure():
     #getHospList(json_data["address"]["latitude"], json_data["address"]["longitude"])
 
     #FUCK this is hard
-    
+
     short_address = getHospList(json_data["address"]["latitude"], json_data["address"]["longitude"])
     shortAddressIWillUseInTheUI =[]
     #print('\n')
     for i in range(5):
-        a = str(short_address[i]).find(",")
-        shortAddressIWillUseInTheUI.append(short_address[i][0:a])
+    #    a = str(short_address[i]).find(",")
+        shortAddressIWillUseInTheUI.append(short_address[i])
 
     return shortAddressIWillUseInTheUI

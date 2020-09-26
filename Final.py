@@ -7,7 +7,7 @@ from tkinter import filedialog
 from tkinter import Menu
 from tkinter import Tk, Canvas, Frame, BOTH
 from main import mainStructure
-
+import webbrowser
 from time import sleep
 
 
@@ -96,6 +96,8 @@ def drawLeft():
 drawLeft()
 
 
+#index = open("search.html").read().format(address = shortAddressIWillUseInThisUI[0][0], time =shortAddressIWillUseInThisUI[0][2], distance = shortAddressIWillUseInThisUI[0][1] )
+#webbrowser.open("Search.html")
 
 
 # PROBABLY THE MOST IMPORTANT PART!!!!!!!!!!

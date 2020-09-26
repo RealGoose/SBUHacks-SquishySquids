@@ -27,7 +27,9 @@ def getHospList(latitude, longitude):
 
     formatted_address_list = []
     for address in addresses:
-        formatted_address_list.append((address["formattedAddress"], getDistance(latitude, longitude, address["latitude"], address["longitude"])[0], getDistance(latitude, longitude, address["latitude"], address["longitude"])[1],))
+        hospital_place = address["formattedAddress"]
+        a = hospital_place.find(",")
+        formatted_address_list.append((hospital_place[0:a], getDistance(latitude, longitude, address["latitude"], address["longitude"])[0], getDistance(latitude, longitude, address["latitude"], address["longitude"])[1]))
         #d_list.append((address["latitude"],address["longitude"]))
 
 
